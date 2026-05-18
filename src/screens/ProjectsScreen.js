@@ -1,38 +1,54 @@
+import { useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 
-const proyectos = [
+const proyectosIniciales = [
   {
     id: '1',
-    titulo: 'Aplicación de navegación',
-    descripcion: 'Proyecto básico usando Drawer, Tabs y Stack Navigator.',
-    tecnologia: 'React Native y Expo',
+    titulo: 'Portafolio Profesional Interactivo',
+    descripcion: 'Aplicación móvil para mostrar perfil, habilidades y proyectos.',
+    tecnologia: 'React Native, Expo y React Navigation',
+    fecha: '2026',
+    rol: 'Desarrolladora móvil',
+    detalle:
+      'Este proyecto permite practicar navegación con Tabs, Drawer y Stack, además de listas con FlatList y diseño responsive con Flexbox.',
   },
   {
     id: '2',
-    titulo: 'Portafolio profesional',
-    descripcion: 'Aplicación móvil para mostrar información personal y proyectos.',
-    tecnologia: 'React Native',
+    titulo: 'Aplicación de Navegación',
+    descripcion: 'Proyecto práctico para aprender navegación entre pantallas.',
+    tecnologia: 'React Native y Expo',
+    fecha: '2026',
+    rol: 'Estudiante desarrolladora',
+    detalle:
+      'Aplicación enfocada en el uso de diferentes tipos de navegación, organización de componentes y estructura básica de un proyecto móvil.',
   },
   {
     id: '3',
-    titulo: 'Lista de tareas',
-    descripcion: 'Aplicación simple para practicar listas y componentes visuales.',
-    tecnologia: 'JavaScript',
+    titulo: 'Lista de Tareas',
+    descripcion: 'Aplicación sencilla para organizar actividades personales.',
+    tecnologia: 'JavaScript y React Native',
+    fecha: '2026',
+    rol: 'Desarrolladora frontend',
+    detalle:
+      'Proyecto simulado para practicar componentes visuales, manejo de datos locales y diseño de tarjetas en una aplicación móvil.',
   },
 ];
 
-export default function CatalogScreen({ navigation }) {
+export default function ProjectsScreen({ navigation }) {
+  const [proyectos] = useState(proyectosIniciales);
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Mis proyectos</Text>
 
       <Text style={styles.text}>
-        Seleccione un proyecto para ver más información.
+        Selecciona un proyecto para ver más información.
       </Text>
 
       <FlatList
         data={proyectos}
         keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.card}
@@ -59,34 +75,38 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F7FA',
   },
   title: {
-    fontSize: 26,
+    fontSize: 27,
     fontWeight: 'bold',
-    marginBottom: 10,
+    color: '#111827',
+    marginBottom: 8,
   },
   text: {
     fontSize: 16,
     marginBottom: 20,
-    color: '#444',
+    color: '#4B5563',
   },
   card: {
     backgroundColor: '#FFFFFF',
     padding: 18,
-    borderRadius: 12,
+    borderRadius: 14,
     marginBottom: 15,
+    elevation: 3,
   },
   cardTitle: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: '#111827',
     marginBottom: 6,
   },
   cardText: {
     fontSize: 15,
-    color: '#444',
+    color: '#4B5563',
     marginBottom: 8,
+    lineHeight: 21,
   },
   cardTech: {
     fontSize: 14,
-    color: '#0066CC',
+    color: '#2563EB',
     fontWeight: 'bold',
   },
 });
