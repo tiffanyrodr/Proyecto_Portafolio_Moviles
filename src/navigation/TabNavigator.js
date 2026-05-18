@@ -1,9 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home, Folder, User } from 'lucide-react-native';
 
-import HomeScreen from '../screens/ProfileScreen';
-import ProjectsStack from './CatalogStack';
-import AboutPortfolioScreen from '../screens/FavoritesScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+import ProjectsStack from './ProjectsStack';
+import SkillsScreen from '../screens/SkillsScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,7 +18,7 @@ export default function TabNavigator() {
     >
       <Tab.Screen
         name="Inicio"
-        component={HomeScreen}
+        component={ProfileScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Home color={color} size={size} />
@@ -37,8 +37,8 @@ export default function TabNavigator() {
       />
 
       <Tab.Screen
-        name="Perfil"
-        component={AboutPortfolioScreen}
+        name="Habilidades"
+        component={SkillsScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <User color={color} size={size} />

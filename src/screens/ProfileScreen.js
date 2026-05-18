@@ -1,76 +1,92 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { CircleUserRound } from 'lucide-react-native';
 
 export default function ProfileScreen() {
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.iconContainer}>
-        <CircleUserRound color="#2563EB" size={90} strokeWidth={1.8} />
+        <CircleUserRound color="#2563EB" size={95} strokeWidth={1.8} />
       </View>
 
-      <Text style={styles.title}>Mi Portafolio Profesional</Text>
+      <Text style={styles.title}>Tiffany Rodríguez</Text>
 
       <Text style={styles.subtitle}>
-        Estudiante de desarrollo móvil
+        Estudiante de Desarrollo Móvil
       </Text>
 
       <Text style={styles.text}>
-        Esta aplicación muestra información personal, proyectos realizados y una
-        breve descripción profesional.
+        Soy estudiante interesada en el desarrollo de aplicaciones móviles,
+        el diseño de interfaces y la creación de experiencias sencillas,
+        funcionales y agradables para el usuario.
       </Text>
 
       <View style={styles.card}>
-        <Text style={styles.cardTitle}>Objetivo</Text>
+        <Text style={styles.cardTitle}>Objetivo profesional</Text>
         <Text style={styles.cardText}>
-          Practicar navegación, diseño de interfaces y componentes básicos en React Native.
+          Seguir aprendiendo React Native, Expo y buenas prácticas de diseño
+          móvil para crear aplicaciones útiles y bien estructuradas.
         </Text>
       </View>
-    </View>
+
+      <View style={styles.card}>
+        <Text style={styles.cardTitle}>Sobre este portafolio</Text>
+        <Text style={styles.cardText}>
+          Esta aplicación presenta mi perfil, habilidades y proyectos mediante
+          navegación con Tabs, Drawer y Stack.
+        </Text>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     padding: 25,
     backgroundColor: '#F5F7FA',
     alignItems: 'center',
   },
   iconContainer: {
-    marginTop: 25,
+    marginTop: 20,
     marginBottom: 15,
   },
   title: {
-    fontSize: 26,
+    fontSize: 28,
     fontWeight: 'bold',
     textAlign: 'center',
+    color: '#111827',
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 17,
-    color: '#555',
-    marginBottom: 20,
+    color: '#2563EB',
+    fontWeight: '600',
+    marginBottom: 18,
   },
   text: {
     fontSize: 16,
     textAlign: 'center',
-    marginBottom: 25,
+    color: '#374151',
+    marginBottom: 22,
     lineHeight: 24,
   },
   card: {
     backgroundColor: '#FFFFFF',
     padding: 20,
-    borderRadius: 12,
+    borderRadius: 14,
     width: '100%',
+    marginBottom: 16,
+    elevation: 3,
   },
   cardTitle: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: '#111827',
     marginBottom: 8,
   },
   cardText: {
     fontSize: 15,
-    color: '#444',
+    color: '#4B5563',
     lineHeight: 22,
   },
 });

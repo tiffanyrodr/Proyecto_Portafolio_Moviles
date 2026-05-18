@@ -1,25 +1,23 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import CatalogScreen from '../screens/CatalogScreen';
+import ProjectsScreen from '../screens/ProjectsScreen';
 import DetailScreen from '../screens/DetailScreen';
 
 const Stack = createNativeStackNavigator();
 
-export default function CatalogStack() {
+export default function ProjectsStack() {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
+    <Stack.Navigator>
       <Stack.Screen
         name="ListaProyectos"
-        component={CatalogScreen}
+        component={ProjectsScreen}
+        options={{ title: 'Mis proyectos' }}
       />
 
       <Stack.Screen
         name="DetalleProyecto"
         component={DetailScreen}
+        options={{ title: 'Detalle del proyecto' }}
       />
     </Stack.Navigator>
   );
