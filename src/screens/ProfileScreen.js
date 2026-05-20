@@ -15,13 +15,20 @@ export default function ProfileScreen() {
       </Text>
 
       <Text style={styles.text}>
-        Soy estudiante interesada en el desarrollo de aplicaciones móviles,
-        el diseño de interfaces y la creación de experiencias sencillas,
-        funcionales y agradables para el usuario.
+        Soy estudiante de Ingeniería Industrial en la Universidad de Costa Rica
+        (UCR) y actualmente curso el Técnico en Desarrollo de Aplicaciones en el
+        Tecnológico de Costa Rica (TEC).
+
+        {'\n\n'}
+
+        Me interesa el desarrollo de aplicaciones móviles, el diseño de
+        interfaces y la creación de experiencias funcionales y agradables para
+        el usuario.
       </Text>
 
       <View style={styles.card}>
         <Text style={styles.cardTitle}>Objetivo profesional</Text>
+
         <Text style={styles.cardText}>
           Seguir aprendiendo React Native, Expo y buenas prácticas de diseño
           móvil para crear aplicaciones útiles y bien estructuradas.
@@ -30,6 +37,7 @@ export default function ProfileScreen() {
 
       <View style={styles.card}>
         <Text style={styles.cardTitle}>Sobre este portafolio</Text>
+
         <Text style={styles.cardText}>
           Esta aplicación presenta mi perfil, habilidades y proyectos mediante
           navegación con Tabs, Drawer y Stack.
@@ -46,10 +54,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F7FA',
     alignItems: 'center',
   },
+
   iconContainer: {
     marginTop: 20,
     marginBottom: 15,
   },
+
   title: {
     fontSize: 28,
     fontWeight: 'bold',
@@ -57,12 +67,14 @@ const styles = StyleSheet.create({
     color: '#111827',
     marginBottom: 8,
   },
+
   subtitle: {
     fontSize: 17,
     color: '#2563EB',
     fontWeight: '600',
     marginBottom: 18,
   },
+
   text: {
     fontSize: 16,
     textAlign: 'center',
@@ -70,6 +82,7 @@ const styles = StyleSheet.create({
     marginBottom: 22,
     lineHeight: 24,
   },
+
   card: {
     backgroundColor: '#FFFFFF',
     padding: 20,
@@ -78,12 +91,14 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     elevation: 3,
   },
+
   cardTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#111827',
     marginBottom: 8,
   },
+
   cardText: {
     fontSize: 15,
     color: '#4B5563',
