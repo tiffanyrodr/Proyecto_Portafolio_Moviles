@@ -24,4 +24,18 @@ Además, este proyecto forma parte de mi proceso de aprendizaje en desarrollo m�
 
 - Proyecto-Web
 - gestor-tareas
+<<<<<<< HEAD
 - luces-navidenas
+=======
+- luces-navidenas
+
+Estos proyectos forman parte de mi práctica y aprendizaje en programación y desarrollo de aplicaciones.
+
+## Tecnologías utilizadas
+
+- React Native
+- Expo
+- React Navigation
+- JavaScript
+- Flexbox
+>>>>>>> 0fe7bf8899d068610f182fb10fc58eeb2d798d9e
