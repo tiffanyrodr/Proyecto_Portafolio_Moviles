@@ -1,8 +1,10 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Home, Info } from 'lucide-react-native';
+import { Home, Info, Globe, Heart } from 'lucide-react-native';
 
 import TabNavigator from './TabNavigator';
 import AboutScreen from '../screens/AboutScreen';
+import ExplorerStack from './ExplorerStack';
+import FavoritesScreen from '../screens/FavoritesScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -20,6 +22,27 @@ export default function DrawerNavigator() {
         options={{
           drawerIcon: ({ color, size }) => (
             <Home color={color} size={size} />
+          ),
+        }}
+      />
+
+      <Drawer.Screen
+        name="Explorador"
+        component={ExplorerStack}
+        options={{
+          headerShown: false,
+          drawerIcon: ({ color, size }) => (
+            <Globe color={color} size={size} />
+          ),
+        }}
+      />
+
+      <Drawer.Screen
+        name="Favoritos"
+        component={FavoritesScreen}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Heart color={color} size={size} />
           ),
         }}
       />
